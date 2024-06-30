@@ -59,14 +59,14 @@ handleCssChange()
   let codeTagsArray = code.match(/(<[^>]*>[^<]*<\/[^>]*>)|(<[^>]*>)/g);
 
     let cssClasses = classNam.split(".")
+// `class="${cssClasses[1]}"`
 
-   
-let includedClass  = codeTagsArray.forEach((elem)=>{
+ codeTagsArray.forEach((elem)=>{
       if(elem.includes(`class="${cssClasses[1]}"`)){
-        console.log("includes", includedClass)
+        console.log("first")
+        console.log(elem)
       }
-})
-
+ })
 }, [classNam])
 
 
